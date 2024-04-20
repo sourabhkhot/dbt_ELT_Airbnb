@@ -1,0 +1,16 @@
+version: 2
+
+exposures:
+  - name: executive_dashboard
+    label: Executive Dashboard
+    type: dashboard
+    maturity: low
+    url: https://5dfed17f.us1a.app.preset.io/superset/dashboard/8/?edit=true&native_filters_key=mzGSw7XDbZR8Ihj4xa8UNAL0NB6nYsXalCxqW6Ew6xCtRXR3h_6O0ARwlinnSyxV
+    description: Executive Dashboard about Airbnb listings and hosts - Sourabh Khot
+    depends_on:
+      - ref('dim_listings_cleansed')
+      - ref('dim_hosts_cleansed')
+      - ref('mart_fullmoon_reviews')
+    owner:
+      name: Sourabh Khot
+      email: khot.s@northeastern.edu
