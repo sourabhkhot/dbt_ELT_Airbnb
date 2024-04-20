@@ -1,1 +1,0 @@
-# dbt_ELT_Airbnb
