@@ -3,8 +3,7 @@
 
 Hello, my name is Sourabh Khot and welcome to my project documentation!
 
-In this project, I have built a data pipeline to perform ELT to analyze Airbnb data using dbt and Snowflake.
-I have also used Github for version control and preset.io for dashboarding. 
+In this project, I have built a data pipeline to perform ELT to analyze Airbnb data using dbt integrated with Snowflake, Github and preset.io (for dashboarding).
 
 Click on the blue 'lineage graph' icon at bottom right to see dependencies between the jobs.
 This dbt project contains 3 sources, 1 seed, 8 models, 1 snapshot, 16 tests, 1 analysis and 1 exposure.
@@ -13,7 +12,7 @@ The project files are available on my [Github](https://github.com/sourabhkhot/db
 
 ### Pipeline Overview
 Here is a graph of the data flow I created:
-![input schema](https://github.com/sourabhkhot/dbt_ELT_Airbnb/blob/dbt_documentation/DataPipelineFlow.png?raw=True)
+![input schema](https://github.com/sourabhkhot/dbt_ELT_Airbnb/blob/dbt_documentation/DataPipelineFlow.png?raw=true)
 
 ### Data Sources
 
@@ -21,7 +20,7 @@ The Airbnb data is sourced from InsideAirbnb.com containing data of 3 entities f
 Reviews are considered as facts, which are linked to dimensions, which are listings and hosts.
 
 The database contain 17499 listings, 14111 hosts and 410285 reviews. Here is the schema:
-![input schema](https://github.com/sourabhkhot/dbt_ELT_Airbnb/blob/dbt_documentation/input_schema.png?raw=True)
+![input schema](https://github.com/sourabhkhot/dbt_ELT_Airbnb/blob/dbt_documentation/input_schema.png?raw=true)
 
 Full moon are hypothesized to affect sleep, which can impact reviews left on the next day after full moon. 
 To test this, full moon dates data is sourced from Kaggle.com and loaded as seed through dbt with Jinja.
@@ -66,6 +65,6 @@ Here's a screenshot of the dashboard. The live version is available at [Present.
 
 ### Thank you
 
-Thank you for viewing my project! Please let me know if you have any questions at khot.s@northeastern.edu - Sourabh Khot
+Thank you for viewing my project! Please share your feedback and questions at khot.s@northeastern.edu - Sourabh Khot
 
 {% enddocs %}
