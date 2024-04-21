@@ -52,18 +52,22 @@ models:
 
 
   - name: fct_reviews
+    description: Cleansed table which contains Airbnb reviews.
     columns:
       - name: listing_id
+        description: The listing's id. References the listings table.
         tests:
           - relationships:
               to: ref('dim_listings_cleansed')
               field: listing_id
 
       - name: reviewer_name
+        description: Name of the reviewer.
         tests:
           - not_null
       
       - name: review_sentiment
+        description: Sentiment selected by reviewer among positive, negative, neutral.
         tests:
           - accepted_values:
               values: ['positive', 'neutral', 'negative']
